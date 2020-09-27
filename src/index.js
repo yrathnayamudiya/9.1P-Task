@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Nav from './components/nav';
-import CardIn from './components/cardin';
-import Slider from './components/topslider';
-import Footer from './components/footer';
+
+import {CardIn,Footer,Slider,Nav} from './components/all'
+
+
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
