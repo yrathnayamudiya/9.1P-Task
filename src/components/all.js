@@ -1,35 +1,36 @@
 import React from 'react';
 import { Component } from 'react';
 import image from  '../sunset.jpg'
+import faker from 'faker'
 
 
 class CardIn extends Component{
     state = {
         todo:[
             {
-                name:"Samadhi",
-                cardtext:"Sample Text",
-                image:"../sunset.jpg"
+                name:faker.name.findName(),
+                cardtext:faker.commerce.productDescription(),
+                image:faker.image.imageUrl()
             },
             {
-                name:"Samadhi2",
-                cardtext:"Sample Text",
-                image:"../sunset.jpg"
+              name:faker.name.findName(),
+              cardtext:faker.commerce.productDescription(),
+              image:faker.image.imageUrl()
             },
             {
-                name:"Samadhi3",
-                cardtext:"Sample Text",
-                image:"../sunset.jpg"
+              name:faker.name.findName(),
+              cardtext:faker.commerce.productDescription(),
+              image:faker.image.imageUrl()
             },
             {
-                name:"Samadhi4",
-                cardtext:"Sample Text",
-                image:"../sunset.jpg"
+              name:faker.name.findName(),
+              cardtext:faker.commerce.productDescription(),
+              image:faker.image.imageUrl()
             },
             {
-                name:"Samadhi6",
-                cardtext:"Sample Text",
-                image:"../sunset.jpg"
+              name:faker.name.findName(),
+              cardtext:faker.commerce.productDescription(),
+              image:faker.image.imageUrl()
             }
         ]
     }
@@ -57,11 +58,10 @@ class Cards extends Component{
         return this.props.items.map((item)=>(
             <div className="col-lg-4">
                             <div className='card'>
-                            <img className="card-img-top" style={{width:"348px"}} src={image} alt="Card"/>
+                            <img className="card-img-top" style={{width:"348px"}} src={item.image} alt="Card"/>
                             <div className="card-body">
-        <h4 className="card-title">{item.name}</h4>
-        <p className="card-text">{item.cardtext}</p>
-
+                            <h4 className="card-title">{item.name}</h4>
+                            <p className="card-text">{item.cardtext}</p>
                             </div>
                             </div>
                         </div>
